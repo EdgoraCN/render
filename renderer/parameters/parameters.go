@@ -8,10 +8,10 @@ import (
 	"github.com/VirtusLab/go-extended/pkg/files"
 	"github.com/VirtusLab/go-extended/pkg/matcher"
 
-	"github.com/ghodss/yaml"
 	"github.com/imdario/mergo"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
+	yaml "gopkg.in/yaml.v3"
 )
 
 const (

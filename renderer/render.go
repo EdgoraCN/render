@@ -11,7 +11,6 @@ import (
 	"github.com/VirtusLab/render/renderer/parameters"
 
 	"github.com/Masterminds/sprig/v3"
-	crypto "github.com/VirtusLab/crypt/crypto/render"
 	"github.com/VirtusLab/go-extended/pkg/files"
 	base "github.com/VirtusLab/go-extended/pkg/renderer"
 	"github.com/VirtusLab/go-extended/pkg/renderer/config"
@@ -102,11 +101,6 @@ func WithExtraFunctions() func(*config.Config) {
 // WithSprigFunctions mutates Renderer configuration by merging the Sprig template functions
 func WithSprigFunctions() func(*config.Config) {
 	return WithMoreFunctions(sprig.TxtFuncMap())
-}
-
-// WithCryptFunctions mutates Renderer configuration by merging the Crypt template functions
-func WithCryptFunctions() func(*config.Config) {
-	return WithMoreFunctions(crypto.TemplateFunctions())
 }
 
 // MergeFunctions merges two template.FuncMap instances, overrides if necessary

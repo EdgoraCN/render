@@ -115,7 +115,6 @@ func CustomRender(template string, opts []string, params parameters.Parameters) 
         renderer.WithParameters(params),
         renderer.WithSprigFunctions(),
         renderer.WithExtraFunctions(),
-        renderer.WithCryptFunctions(),
     ).Render(template)
 }
 ```
